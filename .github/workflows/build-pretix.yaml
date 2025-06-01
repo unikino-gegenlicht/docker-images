@@ -1,4 +1,7 @@
 on:
+  push:
+    paths:
+      - dockerfile.pretix
   workflow_dispatch:
     
 jobs:
