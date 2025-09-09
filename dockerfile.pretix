@@ -1,10 +1,10 @@
 FROM pretix/standalone:stable
 USER root
 RUN pip3 install pretix-cashpayment
+RUN pip3 install pretix-zugferd
 RUN pip3 install pretix-oidc
 RUN pip3 install pretix-fontpack-free
-RUN pip3 install git+https://github.com/Omarelheni/pretix-seating.git
-RUN pip3 install pretix-sumup-payment
+RUN pip3 install pretix-passbook
 USER pretixuser
 WORKDIR /pretix/src
 RUN make production
