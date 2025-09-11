@@ -1,5 +1,6 @@
 FROM pretix/standalone:stable
 USER root
+RUN apt-get update && apt-get -y install ghostscript
 RUN pip3 install pretix-cashpayment
 RUN pip3 install pretix-zugferd
 RUN pip3 install pretix-oidc
